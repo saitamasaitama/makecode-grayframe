@@ -1,20 +1,25 @@
-
-const long2:Image = img`
-    .212.
-    12321
-    .212.
-`;
-
-const bg:Image=scene.backgroundImage();
-
+let long2 = img`
+    . 2 1 2 .
+    1 2 3 2 1
+    . 2 1 2 .
+`
+let bg = scene.backgroundImage()
 const gray:Buffer=hex`000000111111222222333333444444555555666666777777888888999999aaaaaabbbbbbccccccddddddeeeeeeffffff`;
 image.setPalette(gray)
-
 enum TYPE_OPERATION{
     ADD,
     SET,
     MINUS
 }
+
+let obj=JSON.parse(settings.readString("s"));
+
+console.log(obj)
+
+settings.writeString("s", JSON.stringify([
+    12345,
+    99999
+]))
 
 class grayFrame{
     private buff:Image=img``;
@@ -48,14 +53,31 @@ class grayFrame{
 
 }
 
+const s:Sprite=sprites.create(img`
+    ....f
+    f..f.
+    fff..
+fffff`)
+s.y=0;
+s.x=10;
+
+//重力エミュレート
+
+const speed={
+    x:0,
+    y:0,
+}
+
+s.say(":)")
 
 game.onUpdate(function () {
-    
-    bg.drawRect(Math.randomRange(0,160), 0,20, 20,Math.randomRange(1,15))
-    for(let i=0;i<80;i++){
+    s.x+=speed.x;
+    s.y+= speed.y;
+
+    speed.y+=0.5/60.0;
+
+    bg.drawRect(Math.randomRange(0, 160), 0, 20, 20, Math.randomRange(1, 15))
+    for (let index = 0; index < 80; index++) {
         grayFrame.drawImage(long2, Math.randomRange(0, 160), Math.randomRange(0, 120))
     }
-
-    
-    //scene.backgroundImage().scroll(0, 0)
 })

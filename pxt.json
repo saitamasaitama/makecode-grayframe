@@ -9,6 +9,7 @@
         "main.blocks",
         "main.ts",
         "README.md",
+        "Classes.ts",
         "Assets.ts"
     ],
     "preferredEditor": "tsprj",
