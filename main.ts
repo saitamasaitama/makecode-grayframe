@@ -9,6 +9,10 @@ let bg:Image = scene.backgroundImage()
 Colors.GrayPalette();
 const s:Sprite=sprites.create(long2);
 
+const speed={
+  x:0,
+  y:0
+}
 s.y=0;
 s.x=30;
 s.say(":)")
