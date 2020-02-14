@@ -7,13 +7,7 @@ let long2 = img`
 
 let bg:Image = scene.backgroundImage()
 Colors.GrayPalette();
-
-const s:Sprite=sprites.create(img`
-    ....f
-    f..f.
-    fff..
-    fffff
-`);
+const s:Sprite=sprites.create(long2);
 
 s.y=0;
 s.x=30;

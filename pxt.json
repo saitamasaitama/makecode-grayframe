@@ -10,7 +10,9 @@
         "main.ts",
         "README.md",
         "Classes.ts",
-        "Assets.ts"
+        "Assets.ts",
+        "Colors.ts",
+        "Gray.ts"
     ],
     "testFiles": [
         "test.ts"
