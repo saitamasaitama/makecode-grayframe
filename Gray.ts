@@ -13,7 +13,8 @@ namespace Gray{
 
         switch(operation){
           case Gray.TYPE_OPERATION.ADD:
-              bg.setPixel(destx + x, desty + y, this.AddOperation(srcp, destp));
+              //bg.setPixel(destx + x, desty + y, srcp+destp);
+                bg.setPixel(destx + x, desty + y, srcp + destp+0xff);
           break;
           default:break;
         }
