@@ -1,4 +1,8 @@
-// Add your code here
+interface V2{
+    x: number,
+    y: number,
+}
+
 interface V3{
     x:number,
     y:number,
@@ -9,31 +13,8 @@ interface Transform{
     rotation(): V3;
 }
 
-
-abstract class Component{
-    public owner:Obj;
-}
-
-class SpriteComponent extends Component{
-
-}
-
-class RigidBodyComponent extends Component{
-
+function updateDelta(delta:number,func:(d:number)=>void){
+    func(delta);
 }
 
 
-class Obj{
-    public getComponent<T>() {
-
-    }
-    public addComponent(c:Component){
-        c.owner=this;
-    }
-}
-
-const Components:{
-    [key:string]:string
-}={
-
-};

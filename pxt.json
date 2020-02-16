@@ -12,7 +12,9 @@
         "Classes.ts",
         "Assets.ts",
         "Colors.ts",
-        "Gray.ts"
+        "Gray.ts",
+        "Control.ts",
+        "Component.ts"
     ],
     "testFiles": [
         "test.ts"
